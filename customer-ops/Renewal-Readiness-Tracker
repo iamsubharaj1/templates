@@ -1,0 +1,120 @@
+# Renewal Readiness Tracker (T-90 to Renewal)
+A structured tracker to run renewals as a discipline: **readiness signals, risk controls, save motions, and forecast hygiene**.
+
+---
+
+## 1) Outcome
+Reduce renewal surprises by making readiness measurable and owned.
+
+**Definition of done (weekly):**
+- Renewal timeline is updated for every in-scope account
+- Risks have owners, due dates, and next actions
+- Forecast reflects reality (with evidence)
+- Escalations happen early, not late
+
+---
+
+## 2) Scope
+**Applies to:** all accounts inside the renewal window  
+Recommended windows:
+- Enterprise: **T-120** to renewal
+- Mid-market: **T-90** to renewal
+- SMB: **T-60** to renewal
+
+**Owner:** CSM (Responsible), CS Ops (Accountable for process hygiene)
+
+---
+
+## 3) Ownership (RACI)
+| Area | Responsible | Accountable | Consulted | Informed |
+|---|---|---|---|---|
+| Tracker updates | CSM | CS Ops / Head CS | Support Lead | Sales |
+| Commercials and pricing | CSM + Sales | Sales Lead | Finance | Head CS |
+| Product dependencies | CSM | Head CS | Product/Eng | Sales |
+| Exec escalations | CSM | Head CS | Founder/Leadership | Sales/Finance |
+
+---
+
+## 4) Renewal timeline (stage gates)
+Use these gates. If a gate is missed, the account is automatically “At Risk”.
+
+### Gate definitions
+- **T-90:** Renewal plan locked + stakeholder map validated
+- **T-60:** Value proof captured + risk register updated
+- **T-45:** Commercial path aligned (pricing, terms, procurement route)
+- **T-30:** Renewal decision path confirmed (who signs, by when)
+- **T-14:** Final paperwork in motion, zero unknowns
+- **T-0:** Renewal closed (or churn prevented with closure notes)
+
+---
+
+## 5) Readiness signals (simple and measurable)
+
+| Signal | Green | Amber | Red |
+|---|---|---|---|
+| Stakeholder access | sponsor engaged in last 30 days | champion only | no sponsor access |
+| Outcome progress | on-track vs success criteria | slipping | blocked / unclear |
+| Adoption health | Green band | Amber band | Red band |
+| Value proof | ≥ 1 measurable win captured | qualitative only | none |
+| Commercial clarity | pricing + terms path known | partial | unknown |
+| Procurement timeline | confirmed | assumed | unknown |
+| Product blockers | none | manageable | critical unresolved |
+
+---
+
+## 6) Renewal risk register (embedded)
+Maintain a risk register for each account inside this tracker.
+
+| Account | Renewal date | Forecast (Commit/Best/At Risk) | Top risk | Risk owner | Mitigation action | Due date | Status |
+|---|---|---|---|---|---|---|---|
+| {{ACCOUNT}} | {{DATE}} | {{Commit/Best/At Risk}} | {{Risk}} | {{Owner}} | {{Action}} | {{DATE}} | {{Open/Closed}} |
+
+---
+
+## 7) Save motion (when an account is At Risk)
+Use this section only when risk is Amber/Red.
+
+### Save motion checklist
+- Confirm churn reason category: {{Product / Value / Stakeholder / Commercial / Support / Competition}}
+- Define “save outcome” for next 14 days: {{Outcome}}
+- Identify minimum viable fix: {{Fix}}
+- Exec sponsor touchpoint scheduled: {{Yes/No, Date}}
+- Commercial path decided: {{discount / terms / phased rollout / escalation}}
+
+### Save motion actions table
+| Action | Owner | Due date | Evidence required | Status |
+|---|---|---|---|---|
+| {{Action}} | {{Name}} | {{Date}} | {{Link/Metric}} | {{Open/Done}} |
+
+---
+
+## 8) Forecast hygiene rules (non-negotiable)
+A forecast label must have evidence:
+
+- **Commit** means: decision path confirmed + commercial route known + no critical blockers
+- **Best case** means: risks exist but mitigations are in motion with dates
+- **At risk** means: stakeholder access unclear OR value proof missing OR procurement path unknown OR adoption Red
+
+Never keep an account in “Commit” if any Red signal exists.
+
+---
+
+## 9) Weekly renewal review (agenda)
+Run a 30–45 minute review weekly for renewal cohort.
+
+Inputs:
+- Health Signals Template
+- Renewal tracker
+- Support and product blockers
+
+Outputs:
+- Forecast updates
+- Save motion launches
+- Escalations with owners and deadlines
+
+---
+
+## 10) Sanitization rules (public repo)
+Replace all identifiers with placeholders:
+`{{CUSTOMER_NAME}}`, `{{ACCOUNT_ID}}`, `{{CSM_NAME}}`
+No PII, no private URLs, no internal IDs, no confidential pricing.
