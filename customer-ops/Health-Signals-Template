@@ -1,0 +1,144 @@
+# Health Signals Template (Customer Ops)
+A structured template to detect risk early using **leading indicators**, trigger **standard interventions**, and run a predictable weekly review.
+
+---
+
+## 1) Outcome
+Detect adoption and renewal risk early, trigger interventions on time, and maintain a single view of account health that is **owned**, **measurable**, and **actionable**.
+
+**Definition of done (weekly):**
+- Signals updated for target accounts
+- Risks tagged with owners and due dates
+- Interventions launched for any breached thresholds
+- Next review date locked
+
+---
+
+## 2) Scope
+**Applies to:** accounts in onboarding, adoption, or renewal window  
+**Frequency:** weekly (or twice weekly for high-risk cohorts)  
+**Owner:** CSM / Customer Ops owner (primary), with support from Product/Support as needed
+
+---
+
+## 3) Ownership (RACI)
+| Area | Responsible | Accountable | Consulted | Informed |
+|---|---|---|---|
+| Signal updates | CSM | Head CS / CS Ops | Support Lead | Sales |
+| Risk tagging + plan | CSM | Head CS / CS Ops | Product/Eng | Leadership |
+| Intervention execution | CSM + Support | Head CS | Product/Eng | Sales |
+| Renewal escalation | CSM | Head CS | Finance | Founder/Leadership (if needed) |
+
+---
+
+## 4) Signal set (use the ones relevant to your business)
+Use 8 to 12 signals. Too many signals kills adoption.
+
+### A) Product and usage signals (leading)
+| Signal | Definition | Threshold (Green) | Threshold (Amber) | Threshold (Red) | Data source |
+|---|---|---:|---:|---:|---|
+| Active users | Unique active users in last 7 days | ≥ {{G_ACTIVE_USERS}} | {{A_ACTIVE_USERS}}–{{G_ACTIVE_USERS-1}} | < {{A_ACTIVE_USERS}} | {{SOURCE}} |
+| Usage frequency | Active days per week | ≥ {{G_ACTIVE_DAYS}} | {{A_ACTIVE_DAYS}}–{{G_ACTIVE_DAYS-1}} | < {{A_ACTIVE_DAYS}} | {{SOURCE}} |
+| Key feature adoption | % accounts using key feature | ≥ {{G_FEATURE}}% | {{A_FEATURE}}–{{G_FEATURE-1}}% | < {{A_FEATURE}}% | {{SOURCE}} |
+| Time-to-value milestone | milestone achieved by date | On track | At risk | Missed | {{SOURCE}} |
+
+### B) Engagement signals (leading)
+| Signal | Definition | Green | Amber | Red | Data source |
+|---|---|---|---|---|---|
+| Stakeholder engagement | touchpoints in last 14 days | ≥ {{G_TOUCH}} | {{A_TOUCH}}–{{G_TOUCH-1}} | 0 or 1 | {{SOURCE}} |
+| Exec sponsor presence | sponsor attended in last 30 days | Yes | Unclear | No | {{SOURCE}} |
+| Support ticket trend | ticket volume and severity | stable | rising | spike or Sev-1 | {{SOURCE}} |
+
+### C) Value and outcome signals (leading to lagging)
+| Signal | Definition | Green | Amber | Red | Data source |
+|---|---|---|---|---|---|
+| Outcome progress | progress vs success criteria | on track | slipping | blocked | {{SOURCE}} |
+| ROI proof points | measurable wins captured | ≥ 1 per quarter | 1 per half | none | {{SOURCE}} |
+
+---
+
+## 5) Health score rule (simple and runnable)
+Avoid complex scoring in v1.
+
+### Option A: Weighted bands (recommended)
+- Product usage: 50%
+- Engagement: 30%
+- Value outcomes: 20%
+
+Health band logic:
+- **Green:** no Red signals and ≤ 2 Amber signals
+- **Amber:** 1 Red signal OR ≥ 3 Amber signals
+- **Red:** ≥ 2 Red signals OR 1 Red + ≥ 3 Amber signals
+
+Document any override:
+- “Red due to renewal risk even though usage is stable” (must include reason)
+
+---
+
+## 6) Intervention playbook (what to do when thresholds breach)
+
+### If Product usage is Amber
+Standard actions:
+- Confirm friction: training gap vs product limitation vs workflow mismatch
+- 30-minute enablement session with champion
+- Reduce steps: identify 1–2 key workflows to drive weekly
+- Set a 7-day adoption target and track daily
+
+### If Product usage is Red
+Standard actions:
+- 48-hour recovery plan with owner + dates
+- Re-align success criteria: “what outcome matters in 14 days”
+- Escalate internally if feature gaps or integration breaks
+- Schedule exec sponsor touchpoint if adoption is blocked by priority
+
+### If Engagement is Red
+Standard actions:
+- Rebuild stakeholder map and sponsor access
+- “Value recap” email with next 2 actions
+- Set next meeting date before closing loop
+- If sponsor absent 30+ days: escalate to leadership sponsor path
+
+### If Outcome progress is Red
+Standard actions:
+- Re-scope success criteria into smaller milestones
+- Remove blockers (support, product, integration)
+- Define measurable checkpoint in 7 days
+- Capture proof once milestone achieved
+
+---
+
+## 7) Weekly review tracker (copy this table per cohort)
+
+### Weekly Customer Ops Review
+**Week of:** {{DATE}}  
+**Owner:** {{OWNER}}  
+**Cohort:** {{SEGMENT or LIST}}
+
+| Account | Health band | Red signals | Top risk | Intervention this week | Owner | Due date | Next checkpoint |
+|---|---|---|---|---|---|---|---|
+| {{ACCOUNT_1}} | {{Green/Amber/Red}} | {{Signals}} | {{Risk}} | {{Action}} | {{Name}} | {{Date}} | {{Date}} |
+| {{ACCOUNT_2}} | {{Green/Amber/Red}} | {{Signals}} | {{Risk}} | {{Action}} | {{Name}} | {{Date}} | {{Date}} |
+
+**Notes / decisions:**  
+- {{Decision_1}}  
+- {{Decision_2}}
+
+---
+
+## 8) Risk register link (single source of truth)
+This health template should always connect to a Risk Register.
+If you do not have one yet, create: `Renewal-Risk-Register.md` in this folder.
+
+---
+
+## 9) Tool notes (optional)
+- Data source: {{Mixpanel / GA / Internal DB / CRM}}
+- Update automation: {{n8n workflow name}}
+- Logging destination: {{Sheet / Airtable / CRM object}}
+
+---
+
+## 10) Sanitization rules (public repo)
+Replace all identifiers with placeholders:
+`{{CUSTOMER_NAME}}`, `{{ACCOUNT_ID}}`, `{{CSM_NAME}}`, `{{SOURCE}}`
+No PII, no private links, no tokens.
