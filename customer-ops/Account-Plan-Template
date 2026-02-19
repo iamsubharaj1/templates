@@ -1,1 +1,301 @@
-Coming Soon
+# Account Plan Template
+A plug-and-play, fillable account operating document to manage one customer across outcomes, adoption, renewal readiness, and expansion.
+
+## What this folder contains
+This folder is the **canonical source** for the account plan template and its operating standards.
+
+**Required**
+- `README.md` (this file)
+
+**Expected (create if missing)**
+- `Account-Plan-Template.md` (the fillable template you copy per account)
+
+**Optional (recommended for scale)**
+- `examples/` (sanitized examples using placeholders only)
+- `snippets/` (reusable blocks: risk register, stakeholder map, exec summary)
+
+## TL;DR
+- Copy the template into `accounts/{{ACCOUNT_KEY}}/Account-Plan.md`
+- Fill the Day 1 baseline (Outcomes, Stakeholders, Adoption baseline, Risks, 30-day plan, Renewal date path)
+- Update weekly, rebaseline at 90/60/30 days pre-renewal
+- Use the Exec Summary for leadership and escalation readiness
+
+## How to use
+### 1) Create an account instance (recommended)
+Create a per-account plan file and paste the template contents into it:
+
+- Path: `accounts/{{ACCOUNT_KEY}}/Account-Plan.md`
+- Source: `Account-Plan-Template.md` (copy-paste)
+
+### 2) Day 1 baseline (minimum viable plan)
+Your plan is not usable unless these are complete:
+- Success outcomes (2 to 5) with metric, baseline, target, target date
+- Renewal date and renewal path steps (placeholders only in a public repo)
+- Stakeholder map (champion, decision maker, procurement, exec sponsor)
+- Adoption baseline and top gaps
+- Top 3 risks with triggers, mitigations, owner, review date
+- Next 30-day action plan with owners and due dates
+- Exec Summary that matches the above
+
+### 3) Operating cadence
+- Weekly: update actions, risks, stakeholder sentiment, adoption signals
+- Monthly: refresh value proof and milestones
+- Pre-renewal: run a 90/60/30 rebaseline (renewal gaps, stakeholder alignment, proof readiness)
+
+## Quality bar and standards
+A “gold standard” account plan is:
+
+- **Outcome-first:** every action ties to a measurable customer outcome or commercial objective
+- **Evidence-based:** adoption, value, and risk are supported by dated signals, not opinions
+- **Accountable:** one owner per action, explicit due dates, and a success check
+- **Renewal-aware:** renewal confidence is explained (why yes, why not, what changes it)
+- **Decision-ready:** leadership can scan the Exec Summary and decide next steps quickly
+- **Handover-proof:** a new owner can run the next 30 days without a separate handover call
+
+### Definition of Done checklist
+Use this to validate a filled account plan:
+- [ ] 2 to 5 outcomes exist, each with metric, baseline, target, target date
+- [ ] Renewal date and renewal path steps captured (placeholders if public)
+- [ ] Stakeholders include influence, sentiment, and “next move”
+- [ ] Adoption baseline is stated and gaps are explicit
+- [ ] Top 3 risks have triggers, mitigations, owners, review dates
+- [ ] Next 30 days has prioritized actions with owners, due dates, success checks
+- [ ] Exec Summary is current and consistent with the plan
+
+## File map
+Recommended folder usage pattern:
+
+- `templates/customer-ops/Account-Plan-Template/`
+  - `README.md`
+  - `Account-Plan-Template.md`
+  - `examples/` (optional)
+  - `snippets/` (optional)
+
+Recommended per-account instantiation (elsewhere):
+- `accounts/{{ACCOUNT_KEY}}/Account-Plan.md`
+
+## Naming convention
+- `{{ACCOUNT_KEY}}`: lowercase, hyphenated, no spaces  
+  Example: `acme-co`, `northwind-enterprises`
+
+- Dates: `YYYY-MM-DD`
+
+## Sanitization and privacy rules (public repo-safe)
+This repo is public. Do not include real customer data.
+
+Never include:
+- Customer names, domains, emails, phone numbers, addresses
+- Pricing, discounts, contract value, invoices, payment terms
+- Internal tool links (CRM, ticketing, BI), screenshots, exports, recordings
+- Security details, architecture diagrams, incident specifics tied to a real customer
+
+Use placeholders consistently:
+- `{{ACCOUNT_NAME}}`, `{{ACCOUNT_KEY}}`, `{{RENEWAL_DATE}}`, `{{PRODUCTS_IN_SCOPE}}`
+- `{{STAKEHOLDER_1}}`, `{{OUTCOME_1}}`, `{{METRIC_1}}`, `{{BASELINE_1}}`, `{{TARGET_1}}`
+
+---
+
+## Copy-paste template
+Create `Account-Plan-Template.md` with the content below (or use it directly as `accounts/{{ACCOUNT_KEY}}/Account-Plan.md`).
+
+> Everything below is written to be public-safe. Keep placeholders. Do not paste real customer data.
+
+### Account-Plan-Template.md
+
+# Account Plan
+Account: {{ACCOUNT_NAME}}  
+Account Key: {{ACCOUNT_KEY}}  
+Owner: {{OWNER_NAME}}  
+Lifecycle Stage: {{LIFECYCLE_STAGE}} (Onboarding | Adoption | Value | Renewal | Expansion)  
+Last Updated: {{YYYY-MM-DD}}
+
+## 0) Executive Summary (leadership scan)
+**Health:** {{HEALTH}} (Green | Amber | Red)  
+**Renewal confidence:** {{RENEWAL_CONFIDENCE_0_100}} / 100  
+**Expansion potential:** {{EXPANSION_POTENTIAL}} (Low | Medium | High)
+
+**What is working (top 3):**
+1. {{WIN_1}}
+2. {{WIN_2}}
+3. {{WIN_3}}
+
+**What is at risk (top 3):**
+1. {{RISK_TOP_1}} | Mitigation: {{MITIGATION_TOP_1}}
+2. {{RISK_TOP_2}} | Mitigation: {{MITIGATION_TOP_2}}
+3. {{RISK_TOP_3}} | Mitigation: {{MITIGATION_TOP_3}}
+
+**Next 3 moves (next 14–30 days):**
+1. {{NEXT_MOVE_1}}
+2. {{NEXT_MOVE_2}}
+3. {{NEXT_MOVE_3}}
+
+**Leadership asks (only if needed):**
+- {{LEADERSHIP_ASK_1}}
+- {{LEADERSHIP_ASK_2}}
+
+---
+
+## 1) Account Snapshot
+- Industry: {{INDUSTRY}}
+- Region / Timezone: {{REGION_TIMEZONE}}
+- Primary use case: {{PRIMARY_USE_CASE}}
+- Products / modules in scope: {{PRODUCTS_IN_SCOPE}}
+- Implementation type: {{IMPLEMENTATION_TYPE}} (Self-serve | Assisted | Enterprise)
+- Success owner on customer side: {{CUSTOMER_OWNER}}
+- Notes: {{SNAPSHOT_NOTES}}
+
+---
+
+## 2) Success Definition and Outcomes
+### Success definition (customer language)
+{{CUSTOMER_SUCCESS_DEFINITION}}
+
+### Outcomes (2 to 5) with measurable proof
+| Outcome | Metric / Proof | Baseline | Target | Target Date | Owner | Status | Evidence placeholder |
+|---|---|---:|---:|---|---|---|---|
+| {{OUTCOME_1}} | {{METRIC_1}} | {{BASELINE_1}} | {{TARGET_1}} | {{DATE_1}} | {{OWNER_1}} | {{STATUS_1}} | {{EVIDENCE_1}} |
+| {{OUTCOME_2}} | {{METRIC_2}} | {{BASELINE_2}} | {{TARGET_2}} | {{DATE_2}} | {{OWNER_2}} | {{STATUS_2}} | {{EVIDENCE_2}} |
+| {{OUTCOME_3}} | {{METRIC_3}} | {{BASELINE_3}} | {{TARGET_3}} | {{DATE_3}} | {{OWNER_3}} | {{STATUS_3}} | {{EVIDENCE_3}} |
+
+### Value proof plan (how we will prove outcomes)
+- Proof artifact 1: {{PROOF_ARTIFACT_1}}
+- Proof artifact 2: {{PROOF_ARTIFACT_2}}
+- Proof artifact 3: {{PROOF_ARTIFACT_3}}
+
+---
+
+## 3) Commercials and Renewal Mechanics (placeholders only)
+- Contract start: {{CONTRACT_START_DATE}}
+- Contract end / renewal date: {{RENEWAL_DATE}}
+- Renewal type: {{RENEWAL_TYPE}} (Auto | Negotiated | Co-termed)
+- Renewal path owner (internal): {{RENEWAL_OWNER_INTERNAL}}
+- Renewal stakeholders (customer): {{RENEWAL_STAKEHOLDERS_CUSTOMER}}
+
+### Renewal dependencies (what must be true to renew)
+- {{RENEWAL_DEP_1}}
+- {{RENEWAL_DEP_2}}
+- {{RENEWAL_DEP_3}}
+
+### Expansion surfaces (where growth may happen)
+- {{EXPANSION_SURFACE_1}}
+- {{EXPANSION_SURFACE_2}}
+
+---
+
+## 4) Stakeholders and Power Map
+| Stakeholder | Role | Influence | Sentiment | What they care about | Last touch | Next move |
+|---|---|---|---|---|---|---|
+| {{STAKEHOLDER_1}} | Champion | High/Med/Low | Green/Amber/Red | {{CARE_1}} | {{LAST_1}} | {{NEXT_1}} |
+| {{STAKEHOLDER_2}} | Decision Maker | High/Med/Low | Green/Amber/Red | {{CARE_2}} | {{LAST_2}} | {{NEXT_2}} |
+| {{STAKEHOLDER_3}} | Economic Buyer | High/Med/Low | Green/Amber/Red | {{CARE_3}} | {{LAST_3}} | {{NEXT_3}} |
+| {{STAKEHOLDER_4}} | Procurement/Legal | High/Med/Low | Green/Amber/Red | {{CARE_4}} | {{LAST_4}} | {{NEXT_4}} |
+| {{STAKEHOLDER_5}} | User Lead | High/Med/Low | Green/Amber/Red | {{CARE_5}} | {{LAST_5}} | {{NEXT_5}} |
+
+Power map notes:
+- Champion strength: {{CHAMPION_STRENGTH}}
+- Decision dynamics: {{DECISION_DYNAMICS}}
+- Sponsor required: {{EXEC_SPONSOR_REQUIRED_YN}}
+
+---
+
+## 5) Current State (Adoption, Usage, Value)
+### Adoption baseline
+- Active users vs expected: {{ACTIVE_USERS}} / {{EXPECTED_USERS}}
+- Activation rate: {{ACTIVATION_RATE}}
+- Key workflows in use: {{WORKFLOWS_IN_USE}}
+- Gaps / friction points: {{ADOPTION_GAPS}}
+- Support themes: {{SUPPORT_THEMES}}
+- Open blockers: {{OPEN_BLOCKERS}}
+
+### Value delivered so far
+- Wins delivered: {{DELIVERED_WINS}}
+- Wins pending: {{PENDING_WINS}}
+
+---
+
+## 6) Target State (Milestones and Value Proof)
+| Milestone | What changes | Due Date | Owner | Success check |
+|---|---|---|---|---|
+| {{MILESTONE_1}} | {{CHANGE_1}} | {{DUE_1}} | {{OWNER_1}} | {{CHECK_1}} |
+| {{MILESTONE_2}} | {{CHANGE_2}} | {{DUE_2}} | {{OWNER_2}} | {{CHECK_2}} |
+| {{MILESTONE_3}} | {{CHANGE_3}} | {{DUE_3}} | {{OWNER_3}} | {{CHECK_3}} |
+
+Enablement plan:
+- Training/session: {{ENABLEMENT_1}} | Date: {{DATE_1}}
+- Office hours: {{ENABLEMENT_2}} | Cadence: {{CADENCE_2}}
+- Docs/playbooks: {{ENABLEMENT_3}}
+
+---
+
+## 7) Risks, Triggers, and Mitigation Plan
+| Risk | Category | Trigger signals | Mitigation | Owner | Review date | Status |
+|---|---|---|---|---|---|---|
+| {{RISK_1}} | Adoption/Value/Delivery/Relationship/Renewal | {{TRIGGERS_1}} | {{MITIGATION_1}} | {{OWNER_1}} | {{REVIEW_1}} | {{STATUS_1}} |
+| {{RISK_2}} | Adoption/Value/Delivery/Relationship/Renewal | {{TRIGGERS_2}} | {{MITIGATION_2}} | {{OWNER_2}} | {{REVIEW_2}} | {{STATUS_2}} |
+| {{RISK_3}} | Adoption/Value/Delivery/Relationship/Renewal | {{TRIGGERS_3}} | {{MITIGATION_3}} | {{OWNER_3}} | {{REVIEW_3}} | {{STATUS_3}} |
+
+Escalate internally if:
+- {{ESCALATION_RULE_1}}
+- {{ESCALATION_RULE_2}}
+- {{ESCALATION_RULE_3}}
+
+---
+
+## 8) 30-60-90 Day Action Plan
+### Next 30 days (highest priority)
+| Priority | Initiative | Outcome linked | Owner | Due Date | Success check |
+|---:|---|---|---|---|---|
+| 1 | {{INIT_30_1}} | {{LINK_30_1}} | {{OWNER_30_1}} | {{DUE_30_1}} | {{CHECK_30_1}} |
+| 2 | {{INIT_30_2}} | {{LINK_30_2}} | {{OWNER_30_2}} | {{DUE_30_2}} | {{CHECK_30_2}} |
+| 3 | {{INIT_30_3}} | {{LINK_30_3}} | {{OWNER_30_3}} | {{DUE_30_3}} | {{CHECK_30_3}} |
+
+### 31–60 days
+| Priority | Initiative | Owner | Due Date | Success check |
+|---:|---|---|---|---|
+| 1 | {{INIT_60_1}} | {{OWNER_60_1}} | {{DUE_60_1}} | {{CHECK_60_1}} |
+| 2 | {{INIT_60_2}} | {{OWNER_60_2}} | {{DUE_60_2}} | {{CHECK_60_2}} |
+
+### 61–90 days
+| Priority | Initiative | Owner | Due Date | Success check |
+|---:|---|---|---|---|
+| 1 | {{INIT_90_1}} | {{OWNER_90_1}} | {{DUE_90_1}} | {{CHECK_90_1}} |
+| 2 | {{INIT_90_2}} | {{OWNER_90_2}} | {{DUE_90_2}} | {{CHECK_90_2}} |
+
+---
+
+## 9) Operating Cadence (Internal + Customer)
+Customer cadence:
+- Weekly check-in: {{WEEKLY_CADENCE}} | Standard agenda: outcomes, blockers, next actions
+- Monthly review: {{MONTHLY_CADENCE}} | Standard agenda: adoption signals, value proof, roadmap alignment
+- QBR/EBR: {{QBR_CADENCE}} | Standard agenda: outcomes, proof, renewal path, expansion surfaces
+
+Internal cadence:
+- Weekly internal account review: {{INTERNAL_WEEKLY_REVIEW}}
+- Renewal review window: {{RENEWAL_WINDOW}} (90/60/30 days)
+- Escalation owner: {{ESCALATION_OWNER}}
+
+---
+
+## 10) Renewal Readiness (90/60/30)
+### 90 days before renewal
+- [ ] Outcomes on track with evidence placeholders
+- [ ] Stakeholder alignment confirmed (champion + decision maker)
+- [ ] Renewal dependencies identified and planned
+
+### 60 days before renewal
+- [ ] Gaps have owners and dates
+- [ ] Exec sponsor path confirmed if required
+- [ ] Renewal path steps mapped (placeholders only)
+
+### 30 days before renewal
+- [ ] Proof pack ready (what changed, metrics, wins)
+- [ ] Commercial path ready (placeholders only)
+- [ ] Risk remaining is explicitly accepted or mitigated
+
+---
+
+## 11) Decision Log (optional but recommended)
+| Date | Decision | Why | Owner | Follow-up |
+|---|---|---|---|---|
+| {{DATE_1}} | {{DECISION_1}} | {{WHY_1}} | {{OWNER_1}} | {{FOLLOWUP_1}} |
+| {{DATE_2}} | {{DECISION_2}} | {{WHY_2}} | {{OWNER_2}} | {{FOLLOWUP_2}} |
